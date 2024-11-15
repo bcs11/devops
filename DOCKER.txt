@@ -1,0 +1,48 @@
+mkdir Gaurav
+
+cd Gaurav
+sudo Docker build -t Gaurav .
+
+sudo Docker images // generate images
+
+sudo Docker run -d -p 8080:80 Gaurav
+
+0.0.0.0:80  OR http://localhost:8080
+
+###############################################################
+
+FROM nginx:alpine
+
+WORKDIR /usr/share/nginx/html
+
+COPY . .
+
+EXPOSE 80
+
+################################################################
+
+### GPT ###
+
+FROM nginx:alpine
+
+# Set the working directory inside the container to the default Nginx HTML directory
+WORKDIR /usr/share/nginx/html
+
+# Copy all local files (index.html, styles.css, script.js) to the container's working directory
+COPY . .
+
+# Expose port 80 to the outside world
+EXPOSE 80
+######################################################################
+
+sudo docker ps                         # for show container id
+sudo docker stop <container_id>        # for stop container id
+
+sudo lsof -i :8080      # for show pid in port
+sudo lsof -i :8081
+
+sudo kill pid   # remove pid
+
+
+
+
