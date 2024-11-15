@@ -1,0 +1,4 @@
+Jenkins payload url code:
+http://111.88.136.130:8080/github-webhook/
+
+content type: application/jason
