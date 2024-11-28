@@ -9,6 +9,9 @@ sudo Docker run -d -p 8080:80 Gaurav
 
 0.0.0.0:80  OR http://localhost:8080
 
+jenkins login with ip http://192.168.151.249:8080
+
+
 ###############################################################
 
 FROM nginx:alpine
